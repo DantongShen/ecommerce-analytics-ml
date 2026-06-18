@@ -48,7 +48,8 @@ Aggregated across all 366 daily tables (Aug 2016 to Aug 2017):
 ```
 ads-campaign-optimization/
 ├── notebooks/
-│   └── 01_data_overview.ipynb   # schema, distributions, data quality
+│   ├── 01_data_overview.ipynb   # schema, distributions, data quality
+│   └── 02_eda.ipynb             # traffic, device, geography, purchase behavior, campaign analysis
 ├── images/                       # saved chart outputs
 ├── sql/                          # reusable SQL queries
 ├── data/                         # gitignored, intermediate outputs
@@ -60,10 +61,22 @@ ads-campaign-optimization/
 
 ---
 
+## Key Insights (from EDA)
+
+- **US concentration**: the US generates 94% of transactions from 40% of sessions (3.14% conversion). Canada is the only other market with meaningful traction (0.77%). All other countries convert below 0.16%.
+- **Referral is the highest-quality channel**: ~6.25% conversion rate and $718K revenue despite ranking 4th in sessions (after excluding `analytics.google.com`, a non-converting internal traffic source). Social drives reach but almost no revenue (226K sessions, $8K revenue, 0.06% conversion).
+- **Engagement predicts purchase**: purchasers view a median of 37 pages vs 2 for non-purchasers. Below ~10 pageviews, almost no one buys.
+- **Holiday traffic does not equal holiday revenue**: November had the most sessions ever (114K) but the lowest conversion rate (0.84%). December had the highest conversion (1.83%) but one of the lowest AOVs ($115) - holiday buyers are decisive but spend less per order.
+- **Campaign tracking is sparse**: only 3 of 8 named campaigns generated transactions, totalling $28K of $1.78M revenue (<2%). AW - Accessories and AW - Dynamic Search Ads are the only campaigns with measurable return.
+- **AOV needs context**: Display ($857), Japan ($424), and April 2017 ($232) all appeared to be high-value segments, but each was driven by a small number of extreme orders. April's true AOV excluding a single dfa/cpm cluster drops from $232 to $137.
+- **Mobile barely converts**: Chrome at 1.76% vs Safari at 0.43%. Mobile browsers (Safari in-app, Android Webview) convert below 0.2%.
+
+---
+
 ## Phases
 
-- [x] Phase 2: Data Overview
-- [ ] Phase 3: EDA (traffic sources, device, geography, campaign)
+- [x] Phase 2: Data Overview (`01_data_overview.ipynb`)
+- [x] Phase 3: EDA (`02_eda.ipynb`)
 - [ ] Phase 4: Funnel Analysis
 - [ ] Phase 5: Campaign Performance
 - [ ] Phase 6: Budget Optimization
