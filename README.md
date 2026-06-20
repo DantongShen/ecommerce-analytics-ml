@@ -87,13 +87,23 @@ ads-campaign-optimization/
 
 ---
 
+## Key Insights (from Product Analysis)
+
+- **Revenue is concentrated but not extreme:** the top 20% of products (98 SKUs) account for 69.4% of revenue; the bottom 50% contribute only 7.5%. The top 49 products deliver 51% of revenue - a manageable set to prioritize for stock and promotion.
+- **Apparel dominates revenue, Office dominates volume:** Apparel accounts for 39.3% of total revenue ($684K). Office leads in units sold (94,669 - nearly 3x Apparel) at a low effective price of $3.78/unit, driven by bulk journal and notebook orders that signal corporate gifting.
+- **Bags and Electronics have a view-to-cart problem (~18%):** both categories draw high traffic but rarely convert to add-to-cart. Accessories convert best into the cart (41%) but worst out of it (22%) - impulse adds that get abandoned if the session does not result in a primary purchase.
+- **Google brand has a consistent purchase conversion advantage:** in matched-pair comparisons (same product, different brand), Google cart-to-purchase exceeds YouTube in all 4 pairs and Android in 3 of 4. Google converts at 2x YouTube's rate on journals even when priced higher, indicating strong brand-driven pricing power.
+- **Two drivers of high revenue per detail-view session:** high unit price (Vest at $65.66/unit, Headphones at $47.86/unit generate meaningful revenue even with modest purchase rates) and bulk buying (22 oz Water Bottle averages 5.78 units/session, Recycled Paper Journal Set 5.15 units/session). The highest-traffic high-yield products - 26 oz Double Wall Bottle (3,424 views, $11.67/session) and Leatherette Journal (1,713 views, $15.47/session) - are the most efficient targets for incremental traffic investment.
+
+---
+
 ## Phases
 
 - [x] Phase 1: Project Charter (`reports/project_charter.md`)
 - [x] Phase 2: Data Overview (`01_data_overview.ipynb`)
 - [x] Phase 3: EDA (`02_eda.ipynb`)
 - [x] Phase 4: Funnel Analysis (`03_funnel_analysis.ipynb`)
-- [ ] Phase 5: Channel & Budget Optimization (`04_budget_optimization.ipynb`)
-- [ ] Phase 6: Product Analysis (`05_product_analysis.ipynb`)
+- [x] Phase 5: Product Analysis (`04_product_analysis.ipynb`)
+- [ ] Phase 6: Channel & Budget Optimization (`05_budget_optimization.ipynb`)
 - [ ] Phase 7: Experiment Design
 - [ ] Phase 8: Dashboard

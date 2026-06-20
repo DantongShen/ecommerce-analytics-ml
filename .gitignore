@@ -1,6 +1,5 @@
 *.json
 credentials/
-data/
 PROGRESS.md
 sidenotes.md
 .DS_Store
