@@ -1,4 +1,4 @@
-# Project Charter: Advertising Campaign Optimization
+# Project Charter: End-to-End E-commerce Analytics and Revenue Modeling
 
 ## Background
 
@@ -10,7 +10,7 @@ The Google Merchandise Store (store.google.com) sells branded physical merchandi
 
 1. **Identify which channels and campaigns drive real revenue** - not just traffic volume.
 2. **Diagnose where users drop off in the purchase funnel** - to find the highest-leverage UX fix.
-3. **Recommend a channel budget reallocation** - shifting spend away from low-return channels toward high-converting ones.
+3. **Recommend a channel session reallocation** - modeling which controllable channels should receive more or less traffic, as a directional proxy for budget allocation. Actual dollar-level optimization is out of scope because spend data is not available in this dataset.
 4. **Quantify the mobile conversion gap** - and assess whether it is an audience problem or a UX problem.
 
 ---
@@ -23,7 +23,7 @@ From the EDA, these are the open questions the remaining phases will answer:
 - What is the conversion rate at each step: product view → add to cart → checkout → purchase?
 - Are Affiliates and dormant AW campaigns worth keeping at any budget level? (Phase 5)
 - If Referral converts at ~6.25% and Social at 0.06%, what is the revenue impact of shifting Social budget to Referral/Paid Search? (Phase 6)
-- Does the mobile conversion gap (Safari 0.43%, Android Webview 0.08%) reflect audience intent or a broken mobile experience? (Phase 8)
+- Does the mobile conversion gap (Safari 0.43%, Android Webview 0.08%) reflect audience intent or a broken mobile experience? (Answered in Phase 4: gap opens at Add to Cart and holds through checkout - a UX friction problem, not an audience problem.)
 
 ---
 
@@ -34,7 +34,7 @@ From the EDA, these are the open questions the remaining phases will answer:
 | Overall conversion rate | 1.34% | Identify channels where lift is possible |
 | Referral conversion rate | ~6.25% | Maintain or grow with higher session volume |
 | Funnel drop-off at add-to-cart | Unknown | Quantify in Phase 4 |
-| Revenue from named campaigns | <2% of total ($28K / $1.78M) | Improve attribution coverage |
+| Revenue from named campaigns | <2% of total ($28K / $1.78M) | Dataset limitation: campaign ID, ad group, and creative fields are obfuscated in the demo dataset; attribution improvement is not actionable here |
 | Mobile conversion rate | <0.2% | Diagnose root cause |
 
 ---
