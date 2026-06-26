@@ -7,3 +7,4 @@ scipy
 db-dtypes
 pyarrow
 ipykernel
+scikit-learn
