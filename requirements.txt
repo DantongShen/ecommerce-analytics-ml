@@ -8,3 +8,4 @@ db-dtypes
 pyarrow
 ipykernel
 scikit-learn
+xgboost
