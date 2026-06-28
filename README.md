@@ -9,8 +9,8 @@ An end-to-end data analysis project using the Google Analytics Sample Ecommerce 
 **Source:** [Google Analytics Sample Dataset](https://console.cloud.google.com/marketplace/product/obfuscated-ga360-data/obfuscated-ga360-data) (BigQuery public data)
 
 **Tables used:**
-- `ga_sessions_*` — one table per day, sharded by date (Aug 2016 to Aug 2017, 366 days total)
-- `daily_total_visits` — confirmed to match `ga_sessions_*` row counts per day
+- `ga_sessions_*`: one table per day, sharded by date (Aug 2016 to Aug 2017, 366 days total)
+- `daily_total_visits`: confirmed to match `ga_sessions_*` row counts per day
 
 **Schema highlights:**
 - Each row is one session. Nested fields (`hits`, `customDimensions`) require `UNNEST` in SQL.
@@ -66,7 +66,6 @@ ads-campaign-optimization/
 ├── credentials/                     # gitignored, BigQuery service account key
 ├── reports/
 │   └── project_charter.md           # objectives, scope, success metrics, and phase plan
-├── experiments/
 └── dashboard/
 ```
 
@@ -77,7 +76,7 @@ ads-campaign-optimization/
 - **US concentration**: the US generates 94% of transactions from 40% of sessions. Canada is the only other market with meaningful traction. All other countries convert below 0.16%.
 - **Referral is the highest-quality channel**: ~6.25% conversion rate and $718K revenue despite ranking 4th in sessions (after excluding `analytics.google.com`, a non-converting internal traffic source). Social drives reach but almost no revenue.
 - **Engagement predicts purchase**: purchasers view a median of 37 pages vs 2 for non-purchasers. Below ~10 pageviews, almost no one buys.
-- **Holiday traffic does not equal holiday revenue**: November had the most sessions but the lowest conversion rate. December had the highest conversion but one of the lowest AOVs - holiday buyers are decisive but spend less per order.
+- **Holiday traffic does not equal holiday revenue**: November had the most sessions but the lowest conversion rate. December had the highest conversion but one of the lowest AOVs; holiday buyers are decisive but spend less per order.
 - **Campaign tracking is sparse**: only 3 of 8 named campaigns generated transactions, totalling less than 2% of total revenue. AW - Accessories and AW - Dynamic Search Ads are the only campaigns with measurable return.
 - **AOV needs context**: Display, Japan, and April 2017 all appeared to be high-value segments, but each was driven by a small number of extreme orders rather than consistent performance.
 - **Mobile barely converts**: Chrome at 1.76% vs Safari at 0.43%. Mobile browsers convert below 0.2%.
@@ -88,9 +87,9 @@ ads-campaign-optimization/
 
 - **86% of sessions never see a product page.** The biggest loss in the funnel is at discovery, not checkout. Only 1.30% of all sessions result in a purchase.
 - **Checkout friction is at Payment and Review, not the confirm button.** Significant drop-off occurs entering payment details and at the review screen; almost no one abandons after reaching the final confirm step.
-- **Mobile converts at 4x lower rate than desktop.** Drop-off starts from the first funnel step — mobile users are less likely to reach a product page, add to cart, and complete checkout at every stage. The gap between mobile and desktop widens further at Add to Cart.
+- **Mobile converts at 4x lower rate than desktop.** Drop-off starts from the first funnel step: mobile users are less likely to reach a product page, add to cart, and complete checkout at every stage. The gap between mobile and desktop widens further at Add to Cart.
 - **Referral converts best because it enters the funnel deeper and drops off less.** Social drives high volume but 98% of sessions never click into a product.
-- **International traffic faces a checkout wall.** US converts at 28x the rate of Rest of World. International users who do reach checkout drop off at 89% before completing - a signal of shipping restrictions or unsupported payment methods.
+- **International traffic faces a checkout wall.** US converts at 28x the rate of Rest of World. International users who do reach checkout drop off at 89% before completing, suggesting shipping restrictions or unsupported payment methods.
 - **Returning visitors are 22% of sessions but 61% of purchases.** They convert at 6x the rate of new visitors, and their drop-off rate declines at every funnel step.
 - **Best time to convert: Monday and Friday, 10 AM - 2 PM Pacific.** Weekday intent is nearly double weekend rates.
 
