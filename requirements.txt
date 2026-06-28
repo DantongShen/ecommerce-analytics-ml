@@ -1,3 +1,4 @@
+streamlit
 google-cloud-bigquery
 google-cloud-bigquery-storage
 pandas
@@ -8,4 +9,3 @@ db-dtypes
 pyarrow
 ipykernel
 scikit-learn
-xgboost
